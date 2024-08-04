@@ -89,7 +89,7 @@ function App() {
         <div className="addTodo my-5">
           <h2 className='text-lg font-bold'>Add a Task</h2>
           <div className='flex justify-between mt-4 gap-5 '>
-            <input onChange={handleChange} onKeyPress={handleKeyPress} value={todo} type="text" className='w-full py-1 px-2 rounded-md' />
+            <input onChange={handleChange} onKeyDown={handleKeyPress} value={todo} type="text" className='w-full py-1 px-2 rounded-md' />
             <button
               onClick={handleAddOrSave}
               disabled={isButtonDisabled}
