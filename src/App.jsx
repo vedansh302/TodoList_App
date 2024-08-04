@@ -65,12 +65,12 @@ function App() {
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && todo.trim().length > 4) {
+    if (e.key === 'Enter' && todo.trim().length >= 3) {
       handleAddOrSave();
     }
   };
 
-  const isButtonDisabled = todo.trim().length < 4; 
+  const isButtonDisabled = todo.trim().length <= 3; 
 
   const handleCheckbox = (e) => {
     let id = e.target.name;
