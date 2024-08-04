@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
 
@@ -119,6 +120,7 @@ function App() {
         </div>
       </div>
       <Footer/>
+      <Analytics/>
     </>
   );
 }
