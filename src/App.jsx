@@ -71,7 +71,7 @@ function App() {
     }
   };
 
-  const isButtonDisabled = todo.trim().length <= 3; 
+  const isButtonDisabled = todo.trim().length <= 3;
 
   const handleCheckbox = (e) => {
     let id = e.target.name;
@@ -99,7 +99,10 @@ function App() {
             </button>
           </div>
         </div>
-        <input className='cursor-pointer mr-2' onChange={toggleFinished} type="checkbox" checked={showFinished} id='checkbox' /> <label htmlFor="checkbox" className='select-none cursor-pointer'>Show Finished</label>
+        <div className='flex items-center gap-2'>
+        <input className='circle-checkbox cursor-pointer mr-2' onChange={toggleFinished} type="checkbox" checked={showFinished} id='checkbox' />
+        <label htmlFor="checkbox" className='select-none cursor-pointer'>Show Finished</label>
+        </div>
         <h2 className='text-lg font-bold mt-2'>Your Tasks</h2>
         <div className="todos">
           {todos.length === 0 && <div className='text-center text-lg mt-6'>No Tasks to display</div>}
@@ -107,7 +110,7 @@ function App() {
             return (showFinished || !item.isCompleted) && (
               <div key={item.id} className="todo flex justify-between my-4">
                 <div className='flex gap-5 items-center'>
-                  <input className='cursor-pointer' onChange={handleCheckbox} type="checkbox" checked={item.isCompleted} name={item.id} id="" />
+                  <input className='circle-checkbox cursor-pointer' onChange={handleCheckbox} type="checkbox" checked={item.isCompleted} name={item.id} id="" />
                   <div className={item.isCompleted ? "line-through" : ""}>{item.todo}</div>
                 </div>
                 <div className="buttons flex h-full">
@@ -119,8 +122,9 @@ function App() {
           })}
         </div>
       </div>
-      <Footer/>
-      <Analytics/>
+
+      <Footer />
+      <Analytics />
     </>
   );
 }

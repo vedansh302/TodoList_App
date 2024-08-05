@@ -3,10 +3,38 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     background-color: rgb(205, 206, 255);
 }
+
+/* Add this CSS to your global CSS file or within a <style> tag */
+.circle-checkbox {
+    @apply w-4 h-4 rounded-full border-2 border-gray-400;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+  }
+  
+  .circle-checkbox:checked {
+    background-color: transparent;
+    border-color: #5a67d8; /* Tailwind's violet-800 color */
+  }
+  
+  .circle-checkbox:checked::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 50%;
+    background-color: #5a67d8; /* Tailwind's violet-800 color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
