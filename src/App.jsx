@@ -114,7 +114,7 @@ function App() {
                   <div className={item.isCompleted ? "line-through" : ""}>{item.todo}</div>
                 </div>
                 <div className="buttons flex h-full">
-                  <button onClick={(e) => handleEdit(e, item.id)} className='bg-violet-800 hover:bg-violet-950 px-4 py-1 text-white text-base font-bold rounded-md mx-2'><FaEdit /></button>
+                  <button onClick={(e) => handleEdit(e, item.id)} className='bg-violet-800 hover:bg-[#36b12b] px-4 py-1 text-white text-base font-bold rounded-md mx-2'><FaEdit /></button>
                   <button onClick={(e) => { handleDelete(e, item.id) }} className='bg-violet-800 hover:bg-[#D11A2A]  px-4 py-1 text-white text-base font-bold rounded-md mx-1'><MdDelete /></button>
                 </div>
               </div>
