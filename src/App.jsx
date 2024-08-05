@@ -99,7 +99,7 @@ function App() {
             </button>
           </div>
         </div>
-        <input className='cursor-pointer mr-2' onChange={toggleFinished} type="checkbox" checked={showFinished} /> <span>Show Finished</span>
+        <input className='cursor-pointer mr-2' onChange={toggleFinished} type="checkbox" checked={showFinished} id='checkbox' /> <label htmlFor="checkbox" className='select-none cursor-pointer'>Show Finished</label>
         <h2 className='text-lg font-bold mt-2'>Your Tasks</h2>
         <div className="todos">
           {todos.length === 0 && <div className='text-center text-lg mt-6'>No Tasks to display</div>}
