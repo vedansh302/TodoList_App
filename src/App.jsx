@@ -71,7 +71,7 @@ function App() {
     }
   };
 
-  const isButtonDisabled = todo.trim().length <= 3;
+  const isButtonDisabled = todo.trim().length < 3;
 
   const handleCheckbox = (e) => {
     let id = e.target.name;
